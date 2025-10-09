@@ -551,7 +551,13 @@ class PlayerShuriken:
 
 
 # The enemies in the game
-class HeavyPandaEnemy:
+
+class Enemy:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+class HeavyPandaEnemy(Enemy):
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -621,7 +627,7 @@ class HeavyPandaEnemy:
             screen.blit(pygame.transform.scale(panda_enemy_right_images[self.animation_count//10], (150, 150)), (self.true_x, self.true_y))
 
 
-class ArcherFoxEnemy:
+class ArcherFoxEnemy (Enemy):
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -767,7 +773,7 @@ class ArcherFoxEnemyArrow:
                 screen.blit(archer_fox_arrow[self.animation_count//10], (self.x - 20, self.y - 20))
 
 
-class NinjaCatEnemy:
+class NinjaCatEnemy (Enemy):
     def __init__(self, x, y):
         self.x = x
         self.y = y
