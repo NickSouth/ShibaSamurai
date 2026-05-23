@@ -1,0 +1,1 @@
+This is the first project I ever really made. It does not run from this code because I lost many of the assets I used to time. Feel free to read through the code to see my programming knowledge from high school.
