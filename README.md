@@ -9,13 +9,6 @@ defending his village against waves of enemies.
 This is the **original version**. There's also a Unity rebuild ("2.0", better graphics and engine)
 on the [`UnityRemakeVersion`](../../tree/UnityRemakeVersion) branch.
 
-## ⚠️ Assets missing
-
-The code is complete, but most of the image and sound assets it loads were lost over time, so the
-game **won't run as-is** — it will fail immediately trying to load the title screen sprite. The
-full list of what's needed and where it goes is in [`ASSETS_REQUIRED.md`](ASSETS_REQUIRED.md).
-Until those are restored, treat this as a code read.
-
 ## The game
 
 Survive as long as you can across escalating waves of enemies:
@@ -40,19 +33,30 @@ refreshes, and bombs dropped by fallen enemies.
 
 ## Running it
 
-Requires Python 3 and Pygame.
+This project uses [uv](https://docs.astral.sh/uv/). With uv installed, one command handles the
+virtual environment, installs Pygame, and launches the game:
 
 ```bash
-pip install -r requirements.txt
-python main.py
+uv run main.py
 ```
 
-(Once the [required assets](ASSETS_REQUIRED.md) are in place.)
+<details>
+<summary>Without uv</summary>
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate   |   macOS/Linux: source .venv/bin/activate
+pip install pygame
+python main.py
+```
+</details>
 
 ## Files
 
-| File | What it is |
+| Path | What it is |
 |------|------------|
 | `main.py` | **The complete game** — start screen, waves, combat, game-over loop |
+| `Sprites/`, `Sounds/` | Game art (137 sprites) and audio (17 tracks) |
 | `japanese.ttf` | Font used for on-screen text |
+| `pyproject.toml`, `uv.lock` | Dependency + environment definition |
 | `player.py`, `enemy.py`, `flow.py`, `start_screen.py` | Early prototype / scratch scripts from development — kept for posterity, not used by `main.py` |

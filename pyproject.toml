@@ -1,0 +1,12 @@
+[project]
+name = "shiba-samurai"
+version = "1.0.0"
+description = "An infinite, round-based, top-down samurai survival game built from scratch in Python/Pygame."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.0",
+]
+
+[tool.uv]
+package = false
