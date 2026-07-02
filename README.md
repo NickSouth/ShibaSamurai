@@ -9,6 +9,9 @@ defending his village against waves of enemies.
 This is the **original version**. There's also a Unity rebuild ("2.0", better graphics and engine)
 on the [`UnityRemakeVersion`](../../tree/UnityRemakeVersion) branch.
 
+Note that on 7/2/2025, I used Claude Code to find all of the old files and consolidate them to 
+restore this to an observable and runnable repo. The code was all written in 2022.
+
 ## The game
 
 Survive as long as you can across escalating waves of enemies:
